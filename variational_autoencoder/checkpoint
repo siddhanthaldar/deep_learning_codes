@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/sid/deep_learning/codes/variational_autoencoder/weights.ckpt"
+all_model_checkpoint_paths: "/home/sid/deep_learning/codes/variational_autoencoder/weights.ckpt"
