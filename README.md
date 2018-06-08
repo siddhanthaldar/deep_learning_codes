@@ -1,2 +1,2 @@
 # deep_learning
-Repository for keeping Deep Learning algorithms
+Repository for keeping codes related to Deep Learning.
