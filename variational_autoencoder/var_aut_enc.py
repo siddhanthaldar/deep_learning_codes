@@ -68,16 +68,16 @@ b_rec = bias_variable([1,n_input])
 rec_out = tf.nn.sigmoid(mul_mat(h_dec, W_rec, b_rec))
 
 
-#Loss Function
+# Loss Function
 # Here loss function has 2 components: (1) log_likelihood which tells us
 # about how effectively the decoder has learned to reconstruct
 # an input image x given its latent representation z (2) #KL Divergence
-#If the encoder outputs representations z that are different 
-#than those from a standard normal distribution, it will receive 
-#a penalty in the loss. This regularizer term means 
-#‘keep the representations z of each digit sufficiently diverse’. 
-#If we didn’t include the regularizer, the encoder could learn to cheat
-#and give each datapoint a representation in a different region of Euclidean space. 
+# If the encoder outputs representations z that are different 
+# than those from a standard normal distribution, it will receive 
+## a penalty in the loss. This regularizer term means 
+##keep the representations z of each digit sufficiently diverse’. 
+# If we didn’t include the regularizer, the encoder could learn to cheat
+# and give each datapoint a representation in a different region of Euclidean space. 
 
 log_likelihood = tf.reduce_sum( X*tf.log(rec_out+1e-9) + (1-X)*tf.log(1-rec_out+1e-9), axis = 1 )
 
